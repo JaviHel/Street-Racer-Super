@@ -1,0 +1,242 @@
+/* GENERAL STYLES */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: courier;
+}
+
+body{
+    height:768px;
+    width: 1024px;
+
+    background-color: #d81814;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TITTLE */
+
+H1 {
+    position:absolute;
+    top: 1%;
+    width: max-content;
+    color: #5a0600;
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow:#810c21 10px 10px 12px;
+    user-select: none;
+}
+
+/* MAIN GAME CONTAINER */
+
+#container {
+    position:relative;
+    height: 610px; /* 600px equals 30px each px*/
+    width: 520px; /* Because has border the grid needs 10 pxs more than calculated */
+    
+    background-color:  #dc1313;
+    border: 5px solid black;
+    border-radius: 5px;
+    box-shadow: 15px 15px 20px 0px #810c21;
+
+    overflow: hidden;
+}
+
+/* SCORE & LEVEL CONTAINER */
+
+#score-level-container {
+    position:absolute;
+    left:800px;
+    height:610px;
+    width: max-content;
+
+    display:flex;
+    flex-direction: column;
+    align-items: ;
+
+    user-select: none;
+}
+
+.letters {
+    color:#780700;
+    font-weight: bold;
+    font-size:40px;
+    text-shadow: 6px 6px 6px #8b0900;
+
+    user-select: none;
+}
+
+.num {
+    color: #f51919;
+}
+
+/* PLAYER ONE */
+
+#plyr-1 {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    
+    height:120px;
+    width:90px;
+
+    background: url(imgs/RaceCar-Player.png) no-repeat;
+    background-size: contain;
+
+    color: transparent;
+    text-align: center;
+    line-height: 50%;
+
+    user-select: none;
+}
+
+/* PLAYER CRASH EXPLOSION ANIMATION GIF */
+
+#crash {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    
+    height:120px;
+    width:120px;
+
+    background: url(imgs/Explosion-Animation.gif) no-repeat;
+    background-size: contain;
+
+    display: none;
+}
+
+
+
+/* CPU CAR */
+
+.cpu-car {
+    height:120px;
+    width:90px;
+
+    background: url(imgs/RaceCar-Player.png) no-repeat;
+    background-size: contain;
+
+    color: transparent;
+    text-align: center;
+    line-height: 50%;
+
+    position: absolute;
+    rotate: 180deg;
+
+    user-select: none;    
+}
+
+/* SIDELINE ANIMATION */
+
+.sideline {
+    height:600px;
+    width: 30px;
+
+    background: url(imgs/sideline-animation.gif) center no-repeat;
+    background-size: cover;
+
+    display: none;
+    
+}
+
+.left {
+    position:absolute;
+    left:480px;
+}
+
+.right {
+    position:absolute;
+    left:0px;
+}
+
+/* SIDELINE STOPED */
+
+.sideline-stop {
+    height:600px;
+    width: 30px;
+
+    background: url(imgs/sideline-stop.png) center no-repeat;
+    background-size: cover;
+
+    display:none;    
+}
+.L {
+    position:absolute;
+    left:480px;
+}
+.R {
+    position:absolute;
+    left:0px;
+}
+
+
+
+
+/* START GAME & GAME OVER CONTAINER */
+
+.container {
+    position: relative;
+    height: 600px;
+    width: 510px;
+    
+    background-color:  #ce0606;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select:none;
+}
+
+#start-game {
+    font-size: 50px;
+    text-shadow: 2px 2px 2px #5f0818;
+    color: #e61313;
+
+    display:flex;
+
+    animation-name: startGame;
+    animation-fill-mode: forwards;
+    animation-Duration:1s;
+    animation-Iteration-Count: 1;
+    animation-Timing-Function: ease;
+    
+}
+
+@keyframes startGame {
+    to {
+    font-size: 60px;
+    text-shadow: 12px 12px 6px #5f0818;
+    }
+}
+
+#game-over {
+    font-size: 80px;
+    text-shadow: 2px 4px 8px #ff6969;
+    color: #e61313;
+    background-color: #6b0000b8;
+
+    display:none;
+
+    animation-name: gameOver;
+    animation-fill-mode: forwards;
+    animation-Duration:1s;
+    animation-Iteration-Count: 1;
+    animation-Timing-Function: ease;
+}
+
+@keyframes gameOver {
+    from {
+        font-size: 0px;
+         background-color: #6b000000; 
+    }
+    to {
+        font-size: 80px;
+        background-color: #5b0000b8;
+    }
+}
