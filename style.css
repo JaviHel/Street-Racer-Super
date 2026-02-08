@@ -126,7 +126,7 @@ H1 {
     line-height: 50%;
 
     position: absolute;
-    rotate: 180deg;
+    rotate: 0deg;
 
     user-select: none;    
 }
